@@ -1,0 +1,24 @@
+{% load static %}
+
+<!DOCTYPES html>
+<html>
+	<head>
+		<title> Site pour Quiz_informatique </title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=divice-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+	</head>
+	<body>
+		<div classe =" globale"> <!--  pour le conteneur general -->
+			{% include 'layoutes/_entete.html' %}
+		
+			{% include 'layoutes/_nav.html' %}
+			<div>
+				{% block content %}{% endblock%}
+			</div>
+				{% include 'layoutes/_footer.html' %}
+		</div><!-- fin du conteneur -->
+	</body>
+</html>

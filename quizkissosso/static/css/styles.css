@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+body div ul {
+	margin: 0 ;
+	padding: 0 ;
+}
+
+body{
+
+	font-family: 'Open sans', Hevetica, Arial , sans-serif ;
+	background-color: #fefefe ;
+}
+/* l'ensemble de la page est centre et fixer */
+.global {
+	width: 1200px ;
+	margin: 0 auto ;
+
+}
+/* le bloc d'entete */
+.entete {
+	height: 80px;
+	padding: 10px ;
+	background-color: lightgray ;
+	font-size: 14px ;
+}
+
+/* bloc menu navigation */
+.blocMenu {
+	background-color: lavender ;
+}
+
+.listVertical {
+	box-sizing:border-box;
+	display: inline-block;
+	vertical-align: top;
+}
+
+#listMenuVertical{
+	width: 200px ;
+}
+
+.contenu {
+	width: 1000px ;
+	padding: 10px ;
+	padding-left: 30px;
+	background-color: lavender;
+}
+
+
+
+.pied {
+	padding: 10px ;
+	background-color: lightgray ;
+}
+
+/* details sur le menu de navigation */
+#menu {
+	display: flex ;
+	list-style-type: none ;
+}
+
+#menu li {
+	flex : 0 1 auto;
+}
+
+#menu li a , #menu li a :visited {
+	display: block ;
+	height: 35px ;
+	line-height: 35px ;
+	padding : 10px 20px;
+	font-size: 14px ;
+	text-decoration: none;
+	color: black ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

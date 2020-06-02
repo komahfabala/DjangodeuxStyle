@@ -1,0 +1,41 @@
+#creer un projet django
+1.on creer un repertoir de travail
+	a.dand ce repertoire on cree un environnement virtuel de travail avec cette commande 
+		python3 -m venv venv
+	b.une fois creer il faut maintenant activer l'environnement virtuel de travail avec cette commande
+		source ven/bin/activate
+		ensuite pour quitter " desctivate"
+	c. une fois dans cet environnement on peut installer django :
+		" pip install django "
+	d. une fois ceci faite il faut maintenant creer son projet :
+		" django-admin startproject 'mysite' "
+2.	
+
+#creation de la base de donnée en django
+Tout se passe dans models.py
+1.premiere chose a faire creer ses models 
+	pour voir les commandes pour les migration on utilise cette commande :
+		python3 ./manage.py
+		si on utilise " python3 ./showmigration" il nous montre toutes les migration faites  
+2. il faut maintenant appliquer toutes les migrations avec la commande :
+	python3 ./manage.py migrate
+3. maintenant , afin qu'il tient compte de nos models on utilise ctte commande 
+	python3 ./manage.py makemigrations
+	cette commande va appliquer toutes les migrations necessaire pour notre application.si on regarde dans le dossier migration a la racine du projet on verra que django a creer notre table avec tous les attributs necessaire .
+	il faut maintenant appliquer notre applicaton qui a été creer avec cette commade :
+		" python3 ./manage.py migrate "
+4. il faut maintenant visualiser notre base de donnée pour cela :
+	il faut utiliser un outils de visualiser appler DB_browserforsqlite
+5. Manipulation de notre BD
+	on lance notre environ python avac cette commande :
+	"./manage.py shell" ou "./manage.py shell_plus" ensuite pour inserer des données :
+	>>> from blog.models import Post -> le chargement de modul et importation de notre classe
+	>>> Post
+	<class 'blog.models.Post'>
+	>>> p = Post() -> creation d'un objet
+	>>> p.title = 'first post'
+	>>> p.body = 'this is my first post'
+	>>> p.save()
+6. A chque fois qu'on modifie le models.py il faut refaire les commandes suivantes :
+	-> "python3 ./manage.py makemigrations"
+	-> "python3 ./manage.py migrations"

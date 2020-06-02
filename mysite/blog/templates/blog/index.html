@@ -1,0 +1,31 @@
+{% extends 'layoute/base.html' %}
+
+{% load static %}
+
+{% block stylesheets %}
+	<link rel="stylesheet" type="text/css" href="{% url 'blog/css/styles.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<h1>Blog ({{ posts| length }} posts)</h1>
+	
+{% for post in posts  %}
+	<article>
+		<h2>
+			<a href="/blog/posts/{{post.id}}">{{post.id}}-{{post.title|upper}}</a>
+		</h2>
+		<p>
+			{{post.body|truncatewords:3 }}
+		</p>
+		<p>
+			<a href="/blog/posts/{{post.id}}">lire la suite </a>
+		</p>	
+	</article>
+	{% if not forloop.last %}
+		<hr>
+	{% endif %}
+{% empty %}
+	<p> sorry , not post available </p>
+{% endfor %}
+{% endblock %}

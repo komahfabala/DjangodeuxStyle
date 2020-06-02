@@ -1,0 +1,12 @@
+{% extends 'layoute/base.html' %}
+
+{% block title %} blog | {{ posts.title}} {% endblock %}
+{% block content %}
+<article>
+	<h1>{{posts.id}} - {{posts.title}}</h1>
+	<p>{{posts.body}}</p>		
+</article>
+<hr>
+<p><a href="{% url 'blog:index' %}">All-postes</a></p>
+{% endblock %}
+
