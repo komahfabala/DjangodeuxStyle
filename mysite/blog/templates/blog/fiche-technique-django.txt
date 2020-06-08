@@ -1,6 +1,6 @@
 #creer un projet django
 1.on creer un repertoir de travail
-	a.dand ce repertoire on cree un environnement virtuel de travail avec cette commande 
+	a.dans ce repertoire on cree un environnement virtuel de travail avec cette commande 
 		python3 -m venv venv
 	b.une fois creer il faut maintenant activer l'environnement virtuel de travail avec cette commande
 		source ven/bin/activate
